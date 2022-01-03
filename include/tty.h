@@ -25,7 +25,8 @@ enum vga_color {
 	VGA_COLOR_WHITE = 15,
 };
 
-union term_color{
+// Represents a color with only 16 colors in 8 bit with 4 for forground and 4 for background
+union color{
     uint8_t color;
     struct {
         uint8_t fg : 4;
@@ -33,7 +34,7 @@ union term_color{
     };
 };
 
-typedef union term_color term_color_t;
+typedef union color term_color;
 
 extern void terminal_initialize();
 extern size_t strlen(const char* str);
