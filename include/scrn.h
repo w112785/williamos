@@ -1,5 +1,5 @@
-#ifndef tty_h
-#define tty_h
+#ifndef scrn_h
+#define scrn_h
 
 #include <stdbool.h>
 #include <stddef.h>
