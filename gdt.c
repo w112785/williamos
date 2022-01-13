@@ -19,6 +19,9 @@ struct gdt_ptr
 
 void encodeGdtEntry (uint8_t *target, struct gdt_entry source)
 {
-    if ((source.limit_low > 65536) && ((source.limit_low )))
+    if ((source.limit_low > 65536) && ((source.limit_low & 0xFFF) != 0xFFF))
+    {
+        
+    }
 }
 

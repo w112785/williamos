@@ -1,4 +1,4 @@
-OBJECTS = kernel_main.o tty.o boot.oo
+OBJECTS = kernel_main.o scrn.o boot.oo
 CC = i686-elf-gcc
 CFLAGS = -I../include -I./include -Wall -Wextra -O2 -ffreestanding -std=gnu99 -c
 LD = i686-elf-gcc
