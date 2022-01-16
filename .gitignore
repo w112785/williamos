@@ -57,3 +57,7 @@ dkms.conf
 # Additional ignore settings to prevent clutter
 .vscode/
 isodir/boot/grub/grub.cfg
+
+# excluding *.s because i will be compiling down some c code to asm to see what i get.
+# BUT not want them in the git repo.
+*.s
