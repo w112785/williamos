@@ -1,3 +1,5 @@
+[BITS 32]
+
 MBALIGN  equ 1 << 0
 MEMINFO  equ 1 << 1
 FLAGS    equ MBALIGN | MEMINFO
@@ -9,8 +11,6 @@ align 4
     dd MAGIC
     dd FLAGS
     dd CHECKSUM
-
-
 
 section .bss
 align 16
@@ -29,7 +29,26 @@ _start:
     cli
 .hang:
     hlt
-    jmp .hang
+    jmp $
+;    jmp .hang
 .end:
 
+global flush_gdt
+flush_gdt:
+    extern gdtptr
+    lgdt[gdtptr]
+    mov ax, 0x10
+    mov ds, ax
+    mov es, ax
+    mov fs, ax
+    mov gs, ax
+    mov ss, ax
+    jmp 0x08:.flush
+.flush:
+    ret
 
+global idt_load
+idt_load:
+extern idtptr
+    lidt[idtptr]
+    ret

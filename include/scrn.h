@@ -43,5 +43,5 @@ extern void terminal_setcolor(uint8_t color);
 extern void terminal_write(const char* data, size_t size);
 extern void terminal_writestring(const char* data);
 extern void terminal_putchar(char c);
-
+extern void terminal_clear();
 #endif
