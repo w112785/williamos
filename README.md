@@ -1,4 +1,4 @@
-# williamos
+# **williamos**
 just a little pet project for me. <br>
 I will be streaming/posting videos of this over on https://www.youtube.com/basiccomputerhelp/ <br>
 Part one i mostly followed a modified version of this tutorial https://wiki.osdev.org/Bare_Bones <br>
